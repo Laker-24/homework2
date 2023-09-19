@@ -3,80 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/form.css">
     <title>课后练习</title>
-    <style>
-      h2 {
-        color: rebeccapurple;
-      }
-      .register{
-        width: 600px;
-        margin: 10px auto;
-        text-align: center;
-        border:1px solid black;
-      }
-      div {
-        background-color: #DCDCDC;
-        width: 400px;
-        margin: 10px auto;
-        text-align: center;
-      }
-      select{
-        width: 80px;
-      }
-      label{
-                display: inline-block;
-                width: 70px;
-                text-align: right;
-            }
-      p{
-        margin: -13px
-        
-      }
-      span {
-        color: red;
-      }
-      .footer {
-        margin-left: -4px;
-      }
-      .yzm{
-          height: 70px;
-          margin-bottom: -40px;
-          margin-top: 5px;
-          position: relative;
-          width: 80%;
-          line-height: 35px;
-      }
-      .YZM_code{
-        width:45%;
-        height: 30%;
-        margin-top: 10px;
-        font-size: 16px;
-        border-radius: 5px;
-        padding-left: 20px;
-      }
-      .YZM_pic{
-        display:block;
-        width: 30%;
-        height: 40%;
-        background-color: purple;
-        color: #FFF;
-        position:absolute;
-        border-radius: 10px;
-        top: 10px;
-        left: 85%;
-        border-right: 5px;
-        text-align: center;
-      }
-      .YZM_error{
-        width: 70%;
-        color:red;
-        font-size: 14px;
-        margin: 0 auto;
-        height: 20px;
-        line-height: 20px;
-      }
-    </style>
-    
   </head>
   <body>
     <div class="register">
@@ -103,29 +31,29 @@
           <input type="text" id="email" name="email" placeholder="例如:wustzz@sina.com" />
           <span>必填</span>
           <div class="yzm"> 
-            <label for="YZM_Input" style="margin-left:-35px;">验证码:</label>
+            <label for="YZM_Input">验证码:</label>
             <input type="text" name="code" id="YZM_Input" class="YZM_code" placeholder="请输入验证码">
             <span id="code" class="YZM_pic" title="看不清，换一张">A12C</span>
             <div class="YZM_error" id="errorTips"></div>
           </div>
           
-        <div style="position: relative;">
-          <label style="margin-left: -80px;margin-top: 5px;" for="sex">性别:</label>
-          <label style="margin-left: -20px;">
+        <div class="sex">
+          <label id="sex1" for="sex">性别:</label>
+          <label id="sexm">
             <input type="radio" name="sex" value="male" checked="checked" />男
           </label>
           <label> <input type="radio" name="sex" value="female" />女 </label>
         </div>
-        <div>
-          <label style="margin-left: -35px;">生日:</label>
-          <input type="date" name="mydate" style="width: 41%;"/>
+        <div class="birth">
+          <label>生日:</label>
+          <input type="date" name="mydate"/>
         </div>
-        <div>
-          <label for="age" style="margin-left: -35px;">年龄:</label>
+        <div class="age">
+          <label for="age">年龄:</label>
           <input type="text" id="age" name="age" />
         </div>
-        <div>
-          <label style="margin-left: -40px;">籍贯:</label>
+        <div class="jiguan">
+          <label>籍贯:</label>
           <select onchange="changeprovince(this.value)">
             <option>请选择省份</option>
             <option value="0">湖北省</option>
@@ -167,9 +95,9 @@
             <option>请选择城市</option>
           </select>
         </div>
-        <div>
-          <label style="margin-left: -40.5px;">个人学历:</label>
-          <select style="width: 165px;" name="education">
+        <div class="xueli">
+          <label>个人学历:</label>
+          <select name="education">
             <option>--请选择个人学历--</option>
             <option value="0">小学</option>
             <option value="1">初中</option>
@@ -178,8 +106,8 @@
             <option value="4">研究生</option>
           </select>
         </div>
-        <div>
-          <label style="margin-left:-72px; position: relative;">月薪:</label>
+        <div class="salary">
+          <label>月薪:</label>
           <input
             type="range"
             id="salary"
@@ -189,17 +117,17 @@
             step="100"
             value="6000"
           />
-          <span style="color: black;position: absolute;" id="msg"></span>
+          <span id="msg"></span>
         </div>
-        <div>
-          <label style="margin-left: -5px;">个人爱好:</label>
+        <div class="hobby">
+          <label>个人爱好:</label>
           <label style="margin-left: -10px;">
             <input type="checkbox" name="like" value="singing" />唱歌
           </label>
-          <label style="margin-left: -5px;">
+          <label>
             <input type="checkbox" name="like" value="running" />跑步
           </label>
-          <label style="margin-left: -5px;">
+          <label>
             <input type="checkbox" name="like" value="swimming" />游泳
           </label>
         </div>
@@ -222,9 +150,9 @@
             ></div>
             <div id="test-file-info"></div>
         </form>
-      <div style="margin-left: -10px;">
-        <label style="position:relative;bottom: 70px;">个人简历:</label>  
-          <textarea style="width:172px;position: relative;" name="intro" cols="40" rows="10"></textarea>
+      <div class="jianli">
+        <label>个人简历:</label>  
+          <textarea name="intro" cols="40" rows="10"></textarea>
         </div>
         <div class="footer">
           <input type="submit" value="提交" />&nbsp;&nbsp;&nbsp;

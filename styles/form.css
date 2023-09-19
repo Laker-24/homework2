@@ -1,0 +1,123 @@
+h2 {
+    color: rebeccapurple;
+  }
+  .register{
+    width: 600px;
+    margin: 10px auto;
+    text-align: center;
+    border:1px solid black;
+  }
+  div {
+    background-color: #DCDCDC;
+    width: 400px;
+    margin: 10px auto;
+    text-align: center;
+  }
+  select{
+    width: 80px;
+  }
+  label{
+            display: inline-block;
+            width: 70px;
+            text-align: right;
+        }
+  p{
+    margin: -13px
+    
+  }
+  span {
+    color: red;
+  }
+  .footer {
+    margin-left: -4px;
+  }
+  .yzm{
+      height: 70px;
+      margin-bottom: -40px;
+      margin-top: 5px;
+      position: relative;
+      width: 80%;
+      line-height: 35px;
+  }
+  .yzm label{
+    margin-left:-35px;
+  }
+  .YZM_code{
+    width:45%;
+    height: 30%;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 20px;
+  }
+  .YZM_pic{
+    display:block;
+    width: 30%;
+    height: 40%;
+    background-color: purple;
+    color: #FFF;
+    position:absolute;
+    border-radius: 10px;
+    top: 10px;
+    left: 85%;
+    border-right: 5px;
+    text-align: center;
+  }
+  .YZM_error{
+    width: 70%;
+    color:red;
+    font-size: 14px;
+    margin: 0 auto;
+    height: 20px;
+    line-height: 20px;
+  }
+  .sex{
+    position: relative;
+    margin-left: -30px;
+  }
+  .sex1{
+    margin-left: -80px;
+    margin-top: 5px;
+  }
+  .sexm{
+    margin-left: -20px;
+  }
+  .birth label{
+    margin-left: -35px;
+  }
+  .birth input{
+    width:41%;
+  }
+  .age label{
+    margin-left: -35px;
+  }
+  .jiguan label{
+    margin-left: -40px;
+  }
+  .xueli label{
+    margin-left: -40.5px;
+  }
+  .xueli select{
+    width: 165px;
+  }
+  .salary label{
+    margin-left:-72px;
+    position: relative;
+  }
+  .salary span{
+    color: black;
+    position: absolute;
+  }
+  .hobby label{
+    margin-left: -5px;
+  }
+  .jianli{
+    margin-left: -10px;
+  }
+  .jianli label{
+    position:relative;bottom: 70px;
+  }
+  .jianli textarea{
+    width:172px;
+    position: relative;
+  }
