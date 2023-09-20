@@ -18,16 +18,16 @@ header {
   display: flex;
   align-items: center;/*居中布局*/
 }
-.header-inner, main {
+.header-inner, main {/*定位到header-inner类的div和main标签，四周内边距填充20px，外边距自动适应内容*/
   /* width: 1200px; */
   padding: 20px;
   margin: auto;
 }
-.tag-list {
+.tag-list {/*定位到tag-list类的div,外边距距离顶部50px,距离底部15px*/
   margin-top: 50px;
   margin-bottom: 15px;
 }
-.tag-item {
+.tag-item {/*定位到tag-item类的a*/
   display: inline-block;
   padding: 0 8px;
   margin-right: 24px;
