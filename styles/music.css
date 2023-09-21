@@ -1,136 +1,136 @@
-:root {
+:root {/*":root"选择器被用来定义一个全局的CSS变量"--primary-color",值为"#31c27c".在后续的CSS代码中，可以使用这个变量"--primary-color"来设置元素的背景颜色、文本颜色等*/
   --primary-color: #31c27c;
 }
 body {/*页面的全局展示*/
-  margin: 0;/*无外边距*/
-  background: #f5f5f5;/*全局背景颜色*/
-  font-family: Microsoft Yahei;/*全局字体类型*/
-  font-size: 14px;/*全局字体大小*/
+  margin: 0; /* 无外边距：这会消除页面元素（如body标签）边缘的空白区域 */
+  background: #f5f5f5;/* 全局背景颜色：将页面的背景颜色设置为#f5f5f5，这是一种近灰的颜色 */
+  font-family: Microsoft Yahei; /* 全局字体类型：这里选用了微软雅黑字体，这是一种非常常见的中文无衬线字体 */
+  font-size: 14px;/* 全局字体大小：将页面内的字体大小设置为14像素 */
   /* min-width: 1000px; */
 }
-a {
-  text-decoration: none;/**/
-  color: #000;/*标签文字颜色*/
+a {/* 选择器 'a' 定义样式 */
+  text-decoration: none;/* 这一行是设置文本装饰，'none' 表示不添加任何文本装饰，如下划线等 */
+  color: #000;/* 这一行是设置文本颜色，'#000' 代表黑色 */
 }
-header {
-  height: 90px;/*块的高度*/
-  background: white;/*背景颜色*/
-  display: flex;
-  align-items: center;/*居中布局*/
+header {/* 应用于HTML文档中的header标签 */
+  height: 90px;/* 设置header的高度为90像素 */
+  background: white;/* 设置header的背景颜色为白色 */
+  display: flex;/* 将header的显示方式设为flex布局，这允许其中的子元素在可用空间中均匀分布 */
+  align-items: center;/* 在flex布局中，将header中的子元素垂直居中排列 */
 }
-.header-inner, main {/*定位到header-inner类的div和main标签，四周内边距填充20px，外边距自动适应内容*/
+.header-inner, main {/* 这是一个复合选择器，将样式应用于class为header-inner的元素和HTML中的main元素 */
   /* width: 1200px; */
-  padding: 20px;
-  margin: auto;
+  padding: 20px; /* 这行代码设置了元素的内边距，上下左右四个方向的内边距都是20像素 */
+  margin: auto;/* 这行代码设置了元素的外边距，上下左右四个方向的外边距都相等，由浏览器自动计算，常用于居中布局 */
 }
-.tag-list {/*定位到tag-list类的div,外边距距离顶部50px,距离底部15px*/
-  margin-top: 50px;
-  margin-bottom: 15px;
+.tag-list {/* 开始定义一个类名为 .tag-list 的样式规则 */
+  margin-top: 50px;/* 设置 .tag-list 类的顶部外边距（margin）为 50 像素。这会为其上留出 50 像素的空间 */
+  margin-bottom: 15px;/* 设置 .tag-list 类的底部外边距（margin）为 15 像素。这会为其下留出 15 像素的空间 */
 }
-.tag-item {/*定位到tag-item类的a*/
-  display: inline-block;
-  padding: 0 8px;
-  margin-right: 24px;
-  line-height: 26px;
-  color: #000;
-  text-decoration: none;
+.tag-item {/* 开始定义类名为.tag-item的样式 */
+  display: inline-block;/* 设置元素的显示方式为内联块级元素，这样可以允许元素在行内显示，类似于span，但同时保留块级元素的特性 */
+  padding: 0 8px;/* 设置元素的内边距，上下内边距为0，左右内边距为8像素 */
+  margin-right: 24px;/* 设置元素右侧的外边距为24像素 */
+  line-height: 26px; /* 设置元素的行高为26像素 */
+  color: #000; /* 设置元素的文本颜色为黑色 */
+  text-decoration: none;/* 移除元素的文本装饰效果，例如下划线 */
 }
-.tag-active {
-  background: var(--primary-color);
-  color: white;
+.tag-active {/* 开始定义类名为.tag-active的样式 */
+  background: var(--primary-color);/* 设置元素的背景色为CSS变量(--primary-color)所表示的颜色。CSS变量是一个自定义的颜色值，需要在CSS的其他地方定义 */
+  color: white;/* 设置元素的文本颜色为白色 */
 }
-.tag-item:not(.tag-active):hover {
-  color: var(--primary-color);
+.tag-item:not(.tag-active):hover {/* 定义一个CSS规则，选择类名为'tag-item'的元素，但该元素不包含类名为'tag-active'的子元素，并且在鼠标悬停状态下 */
+  color: var(--primary-color);/* 设置元素的文本颜色为CSS变量(--primary-color)所表示的颜色。这个CSS变量需要在其他地方定义，它可能表示的是一种主色调或者主题颜色 */
 }
-.nowrap {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.nowrap { /* 定义一个类名为.nowrap的CSS样式 */
+  white-space: nowrap;/* 保持文本的原始空格和换行，防止自动换行。'nowrap'值意味着文本不会自动换行，即使文本超出了容器的宽度，也会保持在同一行。 */
+  overflow: hidden;/* 当内容溢出元素框时，隐藏超出的内容。这意味着如果内容超过了设定的宽度或高度，将不会显示出来。 */
+  text-overflow: ellipsis;/* 定义如何处理溢出的文本。这里的值'ellipsis'表示如果文本溢出了容器，将显示为省略号。 */
 }
-.playlist {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
-  gap: 45px 15px;
-  margin-bottom: 45px;
+.playlist {/* 为播放列表类（.playlist）定义样式 */
+  display: grid;/* 使用网格（grid）布局，允许自动调整列的数量以填充可用空间 */
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));/* 定义网格的列。使用repeat函数和auto-fill关键字来自动填充与可用空间相等的列数。每个列的宽度最小为200像素，最大为1个空闲空间单位（fr）。这意味着网格布局会尽可能多地创建列，每列的宽度至少为200像素，但是当空间允许时，每列会尽可能地填充可用空间。 */
+  gap: 45px 15px;/* 定义网格列之间的间距，宽度为45像素，高度为15像素。这是在元素之间创建一定间隔的方式，使布局更加清晰和易于理解。 */
+  margin-bottom: 45px;/* 在每个播放列表元素下方添加45像素的间距。这有助于在网格布局中为每个元素提供清晰的分隔。*/
 }
-.cover-wrap {
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin-bottom: 15px;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.cover-wrap {/* 为一个类名为 .cover-wrap 的元素定义样式 */
+  display: flex;/* 设定该元素为Flex布局，这将使得子元素的排布更为灵活和有序 */
+  position: relative;/* 设定元素的位置为相对定位，这样它就可以基于其正常的文档流进行定位，如果不设置，元素会默认为静态定位 */
+  overflow: hidden;/* 当子元素溢出父元素时，将这些元素隐藏，防止它们溢出到视窗外面 */
+  width: 100%;/* 设置元素宽度为100%，这样它就可以填充其父元素的整个宽度 */
+  margin-bottom: 15px;/* 设置元素底部外边距为15像素，这样它可以与其下方的元素保持15像素的距离 */
+  align-items: center;/* 对齐Flex容器中的项目，这会使容器中的所有项目在垂直方向上居中对齐 */
+  justify-content: center;/* 在Flex容器的主轴上居中对齐项目。这将会使得在水平方向上，容器中的所有项目都居中 */
+  cursor: pointer;/* 当鼠标悬停在元素上时，将鼠标的形状更改为指针，表明该元素是可以点击的 */
 }
-.cover-img {
-  width: 100%;
-  transition: all 0.75s;
+.cover-img {/* 定义一个类名为 .cover-img 的样式规则 */
+  width: 100%;/* 设置 .cover-img 类的宽度为其父元素的100%。这意味着它将会占据其父元素的全部宽度。 */
+  transition: all 0.75s;/* 设置 .cover-img 类的过渡效果。'all' 表示所有的CSS属性都将在0.75秒内平滑地过渡。这意味着当任何CSS属性值改变时（如颜色、大小、位置等），它们将在0.75秒内平滑地过渡到新的值，而不是立即改变。 */
 }
-.cover-mask {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: #000;
-  opacity: 0;
-  transition: all 0.5s;
+.cover-mask { /* 定义一个类名为 .cover-mask 的样式规则 */
+  position: absolute;/* 设置元素的定位方式为绝对定位，这样元素可以相对于其最近的已定位祖先元素进行定位，如果没有已定位的祖先元素，那么元素会相对于初始包含块定位。 */
+  left: 0;/* 设置元素左边缘距离为0，使元素紧贴左边 */
+  top: 0;/* 设置元素上边缘距离为0，使元素紧贴顶部 */
+  right: 0;/* 设置元素右边缘距离为0，使元素紧贴右边 */
+  bottom: 0;/* 设置元素下边缘距离为0，使元素紧贴底部 */
+  background: #000;/* 设置元素的背景颜色为黑色，#000是黑色的16进制代码 */
+  opacity: 0;/* 设置元素的透明度为0，即完全透明 */
+  transition: all 0.5s;/* 设置元素的所有属性在改变时，过渡效果时间为0.5秒。过渡效果是一种在属性改变时平滑过渡的方式，可以使得动画看起来更顺滑。 */
 }
-.cover-play {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -35px;
-  margin-top: -35px;
-  opacity: 0;
-  transform: scale(0.7);
-  transition: all 0.5s;
+.cover-play {/* 定义一个类名为 .cover-play 的样式规则 */
+  position: absolute;/* 设置元素的定位方式为绝对定位，这样元素可以相对于其最近的已定位祖先元素进行定位，如果没有已定位的祖先元素，那么元素会相对于初始包含块定位。 */
+  left: 50%;/* 设置元素的左边缘距离为其父元素宽度的50%，使元素水平中心对齐其父元素的中心点 */
+  top: 50%;/* 设置元素的上边缘距离为其父元素高度的50%，使元素垂直中心对齐其父元素的中心点 */
+  margin-left: -35px;/* 设置元素的左外边距为-35px，这会使元素在其父元素的中心点左边35px的位置，实现元素在水平方向上居中 */
+  margin-top: -35px;/* 设置元素的上外边距为-35px，这会使元素在其父元素的中心点上边35px的位置，实现元素在垂直方向上居中 */
+  opacity: 0;/* 设置元素的透明度为0，即完全透明 */
+  transform: scale(0.7);/* 对元素进行缩放变换，缩放比例为0.7，即元素的大小变为原来的70% */
+  transition: all 0.5s;/* 设置元素的所有属性在改变时，过渡效果时间为0.5秒。过渡效果是一种在属性改变时平滑过渡的方式，可以使得动画看起来更顺滑。 */
 }
-.cover-wrap:hover .cover-mask {
-  opacity: 0.2;
+.cover-wrap:hover .cover-mask {/* 当鼠标悬停在 .cover-wrap 类的元素上时，其子元素中名为 .cover-mask 的元素的样式将会被下面的规则所应用 */
+  opacity: 0.2;/* 设置 .cover-mask 元素的透明度为0.2，即半透明 */
 }
-.cover-wrap:hover .cover-play {
-  opacity: 1;
-  transform: scale(1);
+.cover-wrap:hover .cover-play {/* 当鼠标悬停在 .cover-wrap 类的元素上时，其子元素中名为 .cover-play 的元素的样式将会被下面的规则所应用 */
+  opacity: 1;/* 设置 .cover-play 元素的透明度为1，即完全不透明 */
+  transform: scale(1);/* 设置 .cover-play 元素的缩放比例为1，即恢复到原始大小 */
 }
-.cover-wrap:hover .cover-img {
-  transform: scale(1.07);
+.cover-wrap:hover .cover-img {/* 当鼠标悬停在 .cover-wrap 类的元素上时，其子元素中名为 .cover-img 的元素的样式将会被下面的规则所应用 */
+  transform: scale(1.07);/* 设置 .cover-img 元素的缩放比例为1.07，即增大7%的大小 */
 }
-.album-title:hover {
-  color: var(--primary-color);
+.album-title:hover {/* 当鼠标悬停在 .album-title 类的元素上时，该元素的样式将会被下面的规则所应用 */
+  color: var(--primary-color);/* 设置 .album-title 元素的颜色为CSS变量 --primary-color 的值 */
 }
-.album-author {
-  color: #999;
-  line-height: 1.6;
+.album-author {/* 定义一个样式规则，应用于所有类名为 ".album-author" 的元素 */
+  color: #999;/* 设置元素的颜色为深灰色，具体颜色值是 #999 */
+  line-height: 1.6;/* 设置元素行高为1.6倍的字体大小 */
 }
-.album-author:hover {
-  color: var(--primary-color);
+.album-author:hover { /* 当鼠标悬停在 .album-author 类的元素上时，该元素的样式将会被下面的规则所应用 */
+  color: var(--primary-color); /* 设置 .album-author 元素的颜色为CSS变量 --primary-color 的值 */
 }
-.album-time {
-  color: #999;
+.album-time {/* 定义一个样式规则，应用于所有类名为 ".album-time" 的元素 */
+  color: #999;/* 设置元素的颜色为深灰色，具体颜色值是 #999 */
 }
-.page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.page {/* 定义一个样式规则，应用于所有类名为 ".page" 的元素 */
+  display: flex;/* 设置元素的显示模式为 "flex"（弹性盒子布局）。在这种布局中，子元素可以灵活地调整其大小和位置以适应其容器 */
+  align-items: center;/* 调整垂直方向上的子元素到中心位置。如果子元素的宽度不是容器宽度的100%，那么这一属性将使子元素在垂直方向上居中 */
+  justify-content: center;/* 调整水平方向上的子元素到中心位置。这将使子元素在水平方向上居中 */
 }
-.page-item {
-  display: inline-block;
-  color: #a2a2a2;
-  line-height: 50px;
-  padding: 0 20px;
-  margin: 10px;
-  font-size: 16px;
+.page-item {/* 定义一个样式规则，应用于所有类名为 ".page-item" 的元素 */
+  display: inline-block;/* 设置元素的显示模式为 "inline-block"。这意味着元素可以像内联元素一样呈现（例如，可以并排显示），同时也可以设置宽度和高度 */
+  color: #a2a2a2;/* 设置元素的颜色为浅灰色，使用十六进制颜色代码 "#a2a2a2" */
+  line-height: 50px; /* 设置元素的行高为 50px，使文本的垂直对齐更加整齐 */
+  padding: 0 20px;/* 设置元素的内边距。第一个值（0）是上内边距和下内边距，第二个值（20px）是左右内边距 */
+  margin: 10px;/* 设置元素的外边距。这里所有的边距都设置为10px */
+  font-size: 16px; /* 设置元素的字体大小为 16像素 */
 }
-.page-current, .page-item:not(.page-more):hover {
-  background: var(--primary-color);
-  color: white;
+.page-current, .page-item:not(.page-more):hover {/*当鼠标悬停在.page-current和.page-item（不包括.page-more）时，元素的样式将会被下面的规则所应用*/
+  background: var(--primary-color);/* 设置元素的背景色为变量 "--primary-color" 定义的颜色，通常这种变量在全局样式表中已经定义 */
+  color: white; /* 设置元素的颜色为白色 */
 }
-footer {
-  margin-top: 60px;
-  background: #333;
-  height: 200px;
+footer {/* 这段代码设置了footer元素的样式 */
+  margin-top: 60px;/* 设置footer元素的上边距为60像素 */
+  background: #333; /* 设置footer元素的背景色为#333，也就是深灰色 */
+  height: 200px;/* 设置footer元素的高度为200像素 */
 }
 
 
