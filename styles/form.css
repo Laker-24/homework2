@@ -31,6 +31,21 @@ h2 {
   .footer {
     margin-left: -4px;
   }
+  #phone{
+    border-radius: 5px;
+  }
+  #password{
+    border-radius: 5px;
+  }
+  #email{
+    border-radius: 5px;
+  }
+  #birth{
+    border-radius: 5px;
+  }
+  #age{
+    border-radius:5px;
+  }
   .yzm{
       height: 70px;
       margin-bottom: -40px;
